@@ -38,7 +38,7 @@ public class Uranai extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				
 				
-				//ボタンが押された後のおみくじ結果を表示する画面を作成
+				//ボタンが押された後の処理
 				
 				Font font2 = new Font(Font.SERIF,Font.BOLD,30);
 				JPanel pane = new JPanel();
@@ -46,9 +46,10 @@ public class Uranai extends JFrame{
 				ImageIcon image0;
 				JLabel lbl0;
 				JLabel lbl01=null;
+				
+				//乱数を生成し、おみくじの出方を決める
+
 				int s =r.nextInt(4);
-				
-				
 				if(s==0) {
 					
 					 image0 = new ImageIcon("omikuzi/daikiti.png");
@@ -77,11 +78,12 @@ public class Uranai extends JFrame{
 					 lbl01.setForeground(Color.BLUE);
 					
 				}
+	
+				//おみくじ結果の画面
+				
 				pane.setLayout(new BorderLayout());
 				lbl01.setFont(font2);
 				lbl01.setHorizontalAlignment(JLabel.CENTER);
-				
-				
 				pane.add(lbl0,BorderLayout.NORTH);
 				pane.add(lbl01,BorderLayout.SOUTH);
 				
@@ -97,7 +99,8 @@ public class Uranai extends JFrame{
 			
 		});
 		
-		//パネルを作成してフレームに追加する
+		//パネルを作成してメイン画面に追加する
+
 		JPanel panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		panel.add(lbl1,BorderLayout.NORTH);
