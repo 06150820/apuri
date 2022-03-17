@@ -93,6 +93,7 @@ public class Uranai extends JFrame{
 				dlg.setVisible(true);
 				
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				btn.setVisible(false);
 				
 				
 			}
